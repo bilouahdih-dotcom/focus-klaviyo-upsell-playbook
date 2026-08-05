@@ -96,12 +96,14 @@ p { line-height: 1.65; }
 .cover-console > footer b { color: #c8c8be; }
 .cover-console > footer i { display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px rgba(210,165,27,.1); }
 .marquee { overflow: hidden; padding: 18px 0; color: var(--ink); background: var(--gold); font: 800 13px/1 "Space Grotesk"; letter-spacing: .13em; white-space: nowrap; }
-.marquee div { width: max-content; animation: marquee 22s linear infinite; }
-.marquee i { margin: 0 22px; color: var(--ink); font-style: normal; }
+.marquee div { width: max-content; display: flex; animation: marquee 22s linear infinite; }
+.marquee-set { width: 100vw; padding: 0 18px; display: flex; flex: none; justify-content: space-around; align-items: center; }
+.marquee-set b { font: inherit; }
+.marquee i { margin: 0 12px; color: var(--ink); font-style: normal; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 .content-section,.section-wrap { width: min(1180px,calc(100% - 40px)); margin: auto; padding: 112px 0; }
-.intro { padding-top: 0; }
+.intro { padding-top: 32px; }
 .dark-section { color: white; background: var(--ink); }
 .cream-section { background: var(--paper); }
 .section-heading { max-width: 810px; margin-bottom: 48px; }
@@ -560,9 +562,10 @@ small { font-size: 12px!important; }
 }
 
 @media (max-width: 720px) {
+  .marquee-set { width: 760px; }
   .topbar { height: 74px; padding: 0 16px; }.focus-wordmark { font-size: 27px; }.brand-signature { padding-left: 9px; font-size: 6px; }.brand-signature b { font-size: 7px; }.progress-pill { display: none; }.nav-links { top: 74px; }
   .cover { padding: 15px 10px 0; }.cover-shell { min-height: 0; grid-template-columns: 1fr; border-radius: 16px; }.cover-spine { display: none; }.cover-copy { padding: 38px 23px; }.cover h1 { font-size: clamp(46px,14vw,69px); }.cover-copy > p { font-size: 14px; }.cover-actions { align-items: flex-start; flex-direction: column; }.cover-meta { display: grid; grid-template-columns: 1fr 1fr; }.cover-console { grid-column: 1; margin: 0 10px 10px; padding: 18px; }.system-title b { font-size: 35px; }.mini-funnel { overflow-x: auto; }.mini-funnel div { min-width: 100px; }
-  .content-section,.section-wrap { width: min(100% - 28px,1180px); padding: 78px 0; }.intro { padding-top: 0; }.section-heading { margin-bottom: 34px; }.section-heading p,.split-heading > p { font-size: 14px; }.split-heading,.upsell-heading { grid-template-columns: 1fr; gap: 15px; }.split-heading h2 { margin-bottom: 0; }
+  .content-section,.section-wrap { width: min(100% - 28px,1180px); padding: 78px 0; }.intro { padding-top: 26px; }.section-heading { margin-bottom: 34px; }.section-heading p,.split-heading > p { font-size: 14px; }.split-heading,.upsell-heading { grid-template-columns: 1fr; gap: 15px; }.split-heading h2 { margin-bottom: 0; }
   .engine-map { grid-template-columns: 1fr; gap: 8px; }.engine { min-height: 330px; transform: none; }.engine-bridge { flex-direction: row; justify-content: center; }.engine-bridge i { width: 45px; height: 45px; box-shadow: 0 0 0 6px var(--white); }
   .growth-progress { margin-top: 30px; }.growth-progress > header { padding: 25px 22px; grid-template-columns: 1fr; gap: 18px; }.growth-score { text-align: left; }.growth-score > b { font-size: 64px; }.growth-score > span { margin-top: 9px; }.customer-journey { padding: 24px 22px; grid-template-columns: 1fr 1fr; gap: 24px 12px; }.journey-track { display: none; }.journey-stop { grid-template-columns: 44px 1fr; }.journey-stop > i { width: 44px; height: 44px; }.growth-progress > footer { padding: 18px 22px; align-items: flex-start; flex-direction: column; gap: 10px; }.phase-board { grid-template-columns: 1fr; }.phase-column > header { min-height: 125px; }.phase-board .module-card { min-height: 105px; }
   .progress-dashboard { grid-template-columns: 92px 1fr; grid-template-areas: "ring summary" "stats stats" "reset reset"; padding: 20px; }.progress-ring { width: 88px; height: 88px; }.progress-stats { width: 100%; }.progress-stats div { flex: 1; }.module-grid,.setup-grid,.capture-lab,.campaign-layout,.upsell-config,.copy-grid,.glossary-grid { grid-template-columns: 1fr; }.module-card { grid-template-columns: 40px 1fr 30px; }
