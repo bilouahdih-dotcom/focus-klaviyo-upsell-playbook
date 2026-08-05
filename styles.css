@@ -588,6 +588,180 @@ small { font-size: 12px!important; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.marquee div { animation: none; }.reveal { opacity: 1; transform: none; transition: none; }* { transition-duration: .01ms!important; } }
 
 @media print {
-  .topbar,.reading-progress,.marquee,.cover-actions,.growth-progress,.copy-button,.back-to-top,.toast { display: none!important; }
-  body { background: white; }.cover,.cream-section,.dark-section,.upsell-section,.sprint-section { color: #111!important; background: white!important; }.cover-shell { min-height: auto; box-shadow: none; }.cover-console { color: white!important; }.content-section,.section-wrap { padding: 48px 0; }.reveal { opacity: 1; transform: none; }.module-card,.flow-panel,.setup-steps,.signal-board,.email-anatomy,.health-score,.health-metrics article,.kpi-grid article,.sprint-grid article { break-inside: avoid; }
+  @page {
+    size: A4 portrait;
+    margin: 12mm 11mm 15mm;
+
+    @bottom-left {
+      content: "FOCUS  /  PLAYBOOK APP SHOPIFY";
+      color: #746d61;
+      font: 700 7pt "Space Grotesk", Arial, sans-serif;
+      letter-spacing: .08em;
+    }
+
+    @bottom-right {
+      content: counter(page);
+      color: #a77900;
+      font: 800 8pt "Space Grotesk", Arial, sans-serif;
+    }
+  }
+
+  *,*::before,*::after {
+    -webkit-print-color-adjust: exact!important;
+    print-color-adjust: exact!important;
+    text-shadow: none!important;
+    animation: none!important;
+    transition: none!important;
+  }
+
+  html,body { width: auto; background: white!important; }
+  html { scroll-padding-top: 0; }
+  body { margin: 0; background-image: none!important; font-size: 9.5pt; }
+  p { line-height: 1.48; }
+
+  .topbar,.reading-progress,.marquee,.cover-actions,.growth-progress,.copy-button,.back-to-top,.toast,.menu-button,.reset-progress { display: none!important; }
+  .reveal { opacity: 1!important; transform: none!important; }
+
+  /* Une couverture autonome, sans coupure au milieu du visuel. */
+  .cover {
+    width: 100%;
+    height: 270mm;
+    min-height: 270mm;
+    padding: 0;
+    display: grid;
+    place-items: stretch;
+    overflow: hidden;
+    break-after: page;
+    border: 0;
+  }
+  .cover-shell {
+    width: 100%;
+    height: 270mm;
+    min-height: 0;
+    grid-template-columns: 13mm minmax(0,1fr);
+    grid-template-rows: 159mm 111mm;
+    border-radius: 5mm;
+    box-shadow: none;
+  }
+  .cover-spine { padding: 6mm 0; gap: 5mm; }
+  .cover-spine { grid-row: 1 / 3; }
+  .cover-spine span,.cover-spine small { font-size: 6.5pt; }
+  .cover-spine strong { font-size: 10pt; }
+  .cover-copy { grid-column: 2; grid-row: 1; padding: 11mm 9mm 7mm; }
+  .eyebrow { gap: 2mm; font-size: 7pt; }
+  .eyebrow b { padding: 2mm 2.5mm; font-size: 6.5pt; }
+  .cover h1 { margin: 9mm 0 6mm; font-size: 44pt; line-height: .82; }
+  .cover-copy > p { font-size: 11pt; line-height: 1.5; }
+  .cover-meta { gap: 5mm; margin-top: 9mm; padding-top: 5mm; font-size: 6.5pt; }
+  .cover-meta b { font-size: 15pt; }
+  .cover-console { grid-column: 2; grid-row: 2; margin: 0 5mm 5mm; padding: 5mm; border-radius: 4mm; box-shadow: none; }
+  .cover-console > header { padding-bottom: 4mm; font-size: 6.5pt; }
+  .system-title { margin: 5mm 0 4mm; }
+  .system-title span { font-size: 6.5pt!important; }
+  .system-title b { font-size: 21pt; }
+  .mini-funnel { grid-template-columns: 1fr auto 1fr auto 1fr; gap: 2.5mm; }
+  .mini-funnel > i { display: block; }
+  .mini-funnel div { padding: 3mm; }
+  .mini-funnel p { margin: 3mm 0 1mm; font-size: 8pt; }
+  .console-chart { margin: 4mm 0; padding: 3mm; }
+  .console-chart svg { height: 18mm; }
+  .cover-console > footer { font-size: 6pt; }
+
+  /* Rythme d'édition : titres nets et chapitres identifiables. */
+  .content-section,.section-wrap {
+    width: 100%;
+    margin: 0;
+    padding: 10mm 0 8mm;
+  }
+  .dark-section,.cream-section,.upsell-section,.orchestration-section,.sprint-section {
+    margin-inline: -11mm;
+    padding-inline: 11mm;
+  }
+  .section-heading,.split-heading,.upsell-heading { margin-bottom: 7mm; break-after: avoid; }
+  #campaigns > .section-heading { break-after: auto; }
+  .section-heading { max-width: 155mm; }
+  .section-heading h2,.split-heading h2,.upsell-heading h2 {
+    margin: 3mm 0 2mm;
+    font-size: 29pt;
+    line-height: .98;
+  }
+  .section-heading p,.split-heading > p,.upsell-heading p { font-size: 10.5pt; }
+  .section-heading > span,.split-heading > div > span,.upsell-heading > div > span { font-size: 8pt; }
+  .split-heading,.upsell-heading { gap: 8mm; }
+
+  /* Les gros ensembles peuvent se fragmenter; chaque carte reste entière. */
+  .engine-map,.phase-board,.setup-grid,.capture-lab,.campaign-layout,.health-board,.upsell-config,.orchestration-map,.copy-grid,.calculator,.decision-dashboard,.test-loop,.sprint-grid,.launch-checklist,.glossary-grid { break-inside: auto; }
+  .engine,.phase-column,.module-card,.setup-steps li,.signal-list div,.data-rule,.recipe-table > div,.capture-rules article,.flow-node,.flow-guardrails article,.week,.email-anatomy li,.deliverability-list div,.offer-journey article,.upsell-config li,.matrix > div,.journey-stage,.playbook-grid article,.exclusion-rule,.copy-card,.kpi-grid article,.calculator-result,.decision-dashboard > div,.test-loop article,.priority-table > div,.troubleshooting details,.sprint-grid article,.launch-checklist label,.glossary-grid details {
+    break-inside: avoid;
+  }
+  h2,h3,h4,header,summary { break-after: avoid; }
+  table,tr,svg { break-inside: avoid; }
+
+  /* Formats papier compacts, sans colonnes trop étroites. */
+  .engine-map { grid-template-columns: 1fr 21mm 1fr; }
+  .engine { min-height: 76mm; padding: 7mm; transform: none!important; }
+  .engine h3 { margin: 12mm 0 3mm; font-size: 24pt; }
+  .engine p,.engine li { font-size: 8.5pt; }
+  .engine-bridge i { width: 12mm; height: 12mm; box-shadow: 0 0 0 2mm white; }
+
+  .phase-board { grid-template-columns: repeat(2,1fr); gap: 3mm; }
+  .phase-column > header { min-height: 27mm; padding: 5mm; }
+  .phase-column > header b { margin-top: 5mm; font-size: 13pt; }
+  .phase-column > div { padding: 0 4mm; }
+  .phase-board .module-card { min-height: 24mm; padding: 4mm 0; }
+  .maturity-lab { padding: 6mm; gap: 6mm; break-inside: avoid; }
+
+  .setup-grid,.capture-lab,.campaign-layout,.health-board,.upsell-config,.copy-grid,.calculator { gap: 4mm; }
+  .campaign-layout { display: block; }
+  .campaign-layout .email-anatomy { margin-top: 4mm; }
+  .calendar-card header,.email-anatomy header { padding: 3.5mm 5mm; }
+  .week { padding: 3mm 5mm; }
+  .email-anatomy li { padding: 3mm 5mm; }
+  .setup-steps,.signal-board,.flow-panel,.email-anatomy,.health-score,.calculator,.launch-checklist { border-radius: 3mm; }
+  .setup-steps header,.signal-board header { padding: 4mm 5mm; }
+  .setup-steps li { padding: 2.7mm 5mm 2.7mm 15mm; }
+  .setup-steps li::before { left: 5mm; top: 3.6mm; }
+  .signal-list { padding: 2mm 5mm; }
+  .signal-list div { padding: 2.2mm 0; }
+  .signal-board aside { margin: 0 3mm 3mm; padding: 3mm; }
+  .data-rule { margin-top: 3mm; padding: 3mm 4mm; gap: 5mm; }
+  .recipe-block { margin-top: 4mm; }
+  .recipe-block > header { padding: 3.5mm 5mm; }
+  .recipe-table > div { padding: 1.9mm 5mm; font-size: 7.5pt; }
+
+  .flow-tabs { margin-bottom: 4mm; }
+  .flow-panel { grid-template-columns: .86fr 1.14fr; }
+  .flow-copy,.flow-canvas { padding: 6mm; }
+  .flow-copy h3 { margin-top: 8mm; font-size: 24pt; }
+  .flow-blueprint { break-inside: avoid; }
+  .flow-blueprint header { padding: 4mm 5mm; }
+  .flow-blueprint ol { padding-block: 2mm; }
+
+  .offer-journey { gap: 3mm; }
+  .offer-journey > article { min-height: 49mm; padding: 5mm; }
+  .upsell-config li { min-height: 31mm; padding: 5mm; }
+  .orchestration-map { gap: 3mm; }
+  .journey-stage { min-height: 40mm; padding: 5mm; transform: none!important; }
+  .playbook-grid { gap: 3mm; }
+
+  .sprint-grid { grid-template-columns: repeat(4,1fr); gap: 3mm; }
+  .sprint-grid article { min-height: 48mm; padding: 5mm; transform: none!important; }
+  .sprint-grid b { margin-top: 12mm; }
+  .launch-checklist { margin-top: 6mm; grid-template-columns: 55mm 1fr; gap: 6mm; padding: 6mm; }
+  .launch-checklist ul { gap: 2mm; }
+  .launch-checklist label { padding: 3mm; }
+
+  .sources-band {
+    margin: 0 -11mm;
+    min-height: 180mm;
+    padding: 10mm 11mm;
+    grid-template-columns: 1fr;
+    gap: 3mm;
+    align-content: center;
+    break-inside: avoid;
+  }
+  .footer { min-height: 30mm; margin: 0 -11mm -15mm; padding: 6mm 11mm 15mm; background: var(--gold); break-inside: avoid; }
+
+  details > :not(summary) { display: block!important; }
+  a[href^="http"]::after { content: none; }
 }
