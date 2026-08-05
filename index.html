@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="Le playbook Focus pour installer Klaviyo et l’application Upsell sur Shopify, créer les flows essentiels, augmenter le panier moyen et piloter les bons KPI.">
+  <meta property="og:title" content="Focus — Klaviyo × Upsell">
+  <meta property="og:description" content="De la première capture email à la seconde vente : le guide e-commerce complet, sans jargon.">
+  <meta property="og:type" content="website">
+  <title>Focus — Le playbook Klaviyo × Upsell</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"><i id="readingBar"></i></div>
+
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="Retour en haut">
+      <span class="focus-wordmark">Focus</span>
+      <span class="brand-signature">PLAYBOOK E-COMMERCE</span>
+    </a>
+    <nav class="nav-links" id="mainNav" aria-label="Navigation principale">
+      <a href="#klaviyo">Klaviyo</a>
+      <a href="#flows">Flows</a>
+      <a href="#upsell">Upsell</a>
+      <a href="#orchestration">Orchestration</a>
+      <a href="#pilotage">Pilotage</a>
+      <a href="#sprint">Plan 7 jours</a>
+    </nav>
+    <div class="header-actions">
+      <span class="progress-pill"><b id="headerDone">0</b>/12 étapes</span>
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mainNav" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="cover reveal">
+      <div class="cover-grid" aria-hidden="true"></div>
+      <div class="cover-shell">
+        <aside class="cover-spine">
+          <span>FOCUS / ÉDITION 02</span>
+          <strong>E-COMMERCE SYSTEMS</strong>
+          <small>2026 — GUIDE PRATIQUE</small>
+        </aside>
+
+        <div class="cover-copy">
+          <div class="eyebrow"><span></span> Shopify growth playbook <b>DU LIVE À L’EXÉCUTION</b></div>
+          <h1>Klaviyo<br><em>× Upsell.</em></h1>
+          <p><strong>De la première capture à la seconde vente.</strong> Le système complet pour capter, relancer, convertir, augmenter le panier moyen et faire revenir tes clients.</p>
+          <div class="cover-actions">
+            <a class="primary-button" href="#roadmap">Commencer le guide <span>↓</span></a>
+            <button class="text-button" type="button" onclick="window.print()">Imprimer / PDF ↗</button>
+          </div>
+          <div class="cover-meta">
+            <span><b>12</b> étapes guidées</span>
+            <span><b>05</b> flows prioritaires</span>
+            <span><b>16</b> recettes prêtes</span>
+            <span><b>01</b> plan d’action</span>
+          </div>
+        </div>
+
+        <div class="cover-console">
+          <header><i></i><span>GROWTH ENGINE</span><small>LIVE</small></header>
+          <div class="system-title"><span>SYSTÈME</span><b>Klaviyo<br><i>×</i> Upsell</b></div>
+          <div class="mini-funnel">
+            <div><span>01</span><p>Visiteur</p><b>CAPTURE</b></div>
+            <i>→</i>
+            <div><span>02</span><p>Client</p><b>CONVERSION</b></div>
+            <i>→</i>
+            <div><span>03</span><p>VIP</p><b>RÉTENTION</b></div>
+          </div>
+          <div class="console-chart">
+            <div class="chart-head"><span>VALEUR CLIENT</span><b>+ croissance</b></div>
+            <svg viewBox="0 0 420 120" role="img" aria-label="Courbe de valeur client croissante">
+              <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2a51b" stop-opacity=".38"/><stop offset="1" stop-color="#d2a51b" stop-opacity="0"/></linearGradient></defs>
+              <path class="area" d="M0 112 C48 103 70 100 102 91 S160 86 192 66 S249 71 285 44 S347 49 420 12 L420 120 L0 120Z"/>
+              <path class="line" d="M0 112 C48 103 70 100 102 91 S160 86 192 66 S249 71 285 44 S347 49 420 12"/>
+            </svg>
+          </div>
+          <footer><span>STATUS</span><b><i></i> Prêt à configurer</b></footer>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Résumé du parcours">
+      <div>CAPTER <i>✦</i> SEGMENTER <i>✦</i> CONVERTIR <i>✦</i> AUGMENTER LE PANIER <i>✦</i> FIDÉLISER <i>✦</i> MESURER <i>✦</i></div>
+    </section>
+
+    <section class="content-section intro" id="roadmap">
+      <div class="section-heading reveal">
+        <span>00 — Feuille de route</span>
+        <h2>Un système. Deux moteurs.</h2>
+        <p>Klaviyo travaille la relation dans le temps. L’application Shopify Upsell présente des offres complémentaires pendant le parcours d’achat. Le vrai gain arrive quand les deux servent la même stratégie.</p>
+      </div>
+
+      <div class="engine-map reveal">
+        <article class="engine klaviyo-engine">
+          <div class="engine-label">MOTEUR 01</div>
+          <h3>Klaviyo</h3>
+          <p>Collecte les données, segmente les profils et envoie le bon message selon le comportement.</p>
+          <ul><li>Capture email / SMS</li><li>Flows automatisés</li><li>Campagnes segmentées</li><li>Rétention client</li></ul>
+        </article>
+        <div class="engine-bridge"><span>DONNÉES</span><i>↔</i><span>OFFRES</span></div>
+        <article class="engine upsell-engine">
+          <div class="engine-label">MOTEUR 02</div>
+          <h3>L’app Upsell</h3>
+          <p>Application installée sur Shopify pour présenter une offre complémentaire au moment où l’intention d’achat est la plus forte.</p>
+          <ul><li>Offre produit</li><li>Offre panier</li><li>Offre après achat</li><li>Mesure du panier moyen</li></ul>
+        </article>
+      </div>
+
+      <div class="growth-progress reveal">
+        <header>
+          <div><span>PARCOURS DE CROISSANCE</span><h3 id="progressTitle">Construis le socle.</h3><p>Chaque mission appliquée fait avancer ta boutique vers le réachat.</p></div>
+          <div class="growth-score"><b id="progressPercent">0%</b><span><strong id="doneCount">0</strong> sur 12 missions</span></div>
+        </header>
+        <div class="customer-journey">
+          <div class="journey-stop current" data-stage="0"><i>01</i><span>VISITEUR</span><small>La donnée existe</small></div>
+          <div class="journey-stop" data-stage="1"><i>02</i><span>PROSPECT</span><small>L’intérêt est capté</small></div>
+          <div class="journey-stop" data-stage="2"><i>03</i><span>CLIENT</span><small>La commande progresse</small></div>
+          <div class="journey-stop" data-stage="3"><i>04</i><span>RÉCURRENT</span><small>La valeur se répète</small></div>
+          <div class="journey-track"><i id="progressTrack"></i></div>
+        </div>
+        <footer><p><span id="leftCount">12</span> missions restantes · avance dans l’ordre ou adapte à ton diagnostic.</p><button class="reset-progress" id="resetProgress" type="button">Recommencer le parcours ↺</button></footer>
+      </div>
+
+      <div class="phase-board" id="moduleGrid">
+        <article class="phase-column phase-foundation">
+          <header><span>PHASE 01</span><b>RENDRE VISIBLE</b><small>Visiteur → signal exploitable</small></header>
+          <div>
+            <button class="module-card" data-step="01" data-target="setup"><span>01</span><div><b>Installer proprement</b><p>Connexion, tracking et consentement.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="02" data-target="data"><span>02</span><div><b>Lire les événements</b><p>Profils, listes, segments et signaux.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="03" data-target="capture"><span>03</span><div><b>Capter l’intérêt</b><p>Formulaire, promesse et bienvenue.</p></div><i>↗</i></button>
+          </div>
+        </article>
+        <article class="phase-column phase-convert">
+          <header><span>PHASE 02</span><b>CONVERTIR</b><small>Prospect → première commande</small></header>
+          <div>
+            <button class="module-card" data-step="04" data-target="flows"><span>04</span><div><b>Lancer les 5 flows</b><p>Les scénarios qui tournent chaque jour.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="05" data-target="campaigns"><span>05</span><div><b>Envoyer des campagnes</b><p>Calendrier, segmentation et structure.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="06" data-target="deliverability"><span>06</span><div><b>Atteindre la boîte mail</b><p>Réputation, nettoyage et conformité.</p></div><i>↗</i></button>
+          </div>
+        </article>
+        <article class="phase-column phase-value">
+          <header><span>PHASE 03</span><b>AUGMENTER</b><small>Commande → panier plus utile</small></header>
+          <div>
+            <button class="module-card" data-step="07" data-target="upsell"><span>07</span><div><b>Configurer l’app Upsell</b><p>Placement, produit et rentabilité.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="08" data-target="matrix"><span>08</span><div><b>Créer les bons couples</b><p>Produit principal × complément logique.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="09" data-target="copy"><span>09</span><div><b>Écrire pour convertir</b><p>Scripts email et textes d’offre.</p></div><i>↗</i></button>
+          </div>
+        </article>
+        <article class="phase-column phase-retain">
+          <header><span>PHASE 04</span><b>FAIRE REVENIR</b><small>Client → valeur récurrente</small></header>
+          <div>
+            <button class="module-card" data-step="10" data-target="pilotage"><span>10</span><div><b>Piloter les chiffres</b><p>AOV, réachat, conversion et marge.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="11" data-target="tests"><span>11</span><div><b>Tester avec méthode</b><p>Une hypothèse, une variable, un verdict.</p></div><i>↗</i></button>
+            <button class="module-card" data-step="12" data-target="sprint"><span>12</span><div><b>Exécuter le sprint</b><p>L’ordre exact pour tout mettre en ligne.</p></div><i>↗</i></button>
+          </div>
+        </article>
+      </div>
+
+      <div class="maturity-lab reveal" id="diagnostic">
+        <div class="maturity-intro">
+          <span>DIAGNOSTIC EXPRESS</span>
+          <h3>Ne travaille pas sur le mauvais problème.</h3>
+          <p>Coche ce qui est déjà vraiment opérationnel. Le guide te montre ensuite la priorité la plus logique pour ta boutique.</p>
+          <div class="maturity-result"><small>TA PRIORITÉ ACTUELLE</small><b id="maturityResult">Fiabiliser les fondations</b><p id="maturityAdvice">Commence par la connexion, les événements et le consentement avant de créer des campagnes.</p></div>
+        </div>
+        <div class="maturity-checks" id="maturityChecks">
+          <label><input type="checkbox" value="tracking"><i></i><span><b>Tracking vérifié</b><small>Les événements testés remontent correctement.</small></span></label>
+          <label><input type="checkbox" value="capture"><i></i><span><b>Capture active</b><small>Le formulaire livre une promesse claire.</small></span></label>
+          <label><input type="checkbox" value="flows"><i></i><span><b>Flows en ligne</b><small>Welcome, abandon et post-achat sont testés.</small></span></label>
+          <label><input type="checkbox" value="upsell"><i></i><span><b>Offre Upsell rentable</b><small>Produit, placement et marge sont validés.</small></span></label>
+          <label><input type="checkbox" value="reporting"><i></i><span><b>Pilotage hebdomadaire</b><small>Une décision est prise à partir des KPI.</small></span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="klaviyo">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <span>01 — Klaviyo</span>
+          <h2>La donnée avant le design.</h2>
+          <p>Un bel email envoyé au mauvais profil ne vaut rien. Avant les templates, vérifie ce que Shopify transmet et décide qui peut recevoir quoi.</p>
+        </div>
+
+        <div class="setup-grid" id="setup">
+          <article class="setup-steps reveal">
+            <header><span>SETUP / CHECKLIST</span><b>Connexion Shopify → Klaviyo</b></header>
+            <ol>
+              <li><b>Installer Klaviyo</b><p>Depuis Shopify, connecter la bonne boutique au bon compte Klaviyo.</p></li>
+              <li><b>Activer le suivi onsite</b><p>Vérifier le pixel / app embed, puis tester une visite et une vue produit.</p></li>
+              <li><b>Synchroniser les abonnés</b><p>Choisir la liste principale et contrôler comment le consentement remonte.</p></li>
+              <li><b>Régler l’expéditeur</b><p>Nom lisible, adresse d’envoi professionnelle, domaine d’envoi authentifié.</p></li>
+              <li><b>Faire une commande test</b><p>Contrôler le profil, l’événement de commande et le montant remonté.</p></li>
+            </ol>
+          </article>
+          <article class="signal-board reveal" id="data">
+            <header><span>SIGNAL BOARD</span><b>Les événements à retrouver</b><small>SHOPIFY SYNC</small></header>
+            <div class="signal-list">
+              <div><i class="live-dot"></i><span>Active on Site</span><b>Visite reconnue</b></div>
+              <div><i class="live-dot"></i><span>Viewed Product</span><b>Produit consulté</b></div>
+              <div><i class="live-dot"></i><span>Added to Cart</span><b>Ajout au panier</b></div>
+              <div><i class="live-dot"></i><span>Started Checkout</span><b>Checkout commencé</b></div>
+              <div><i class="live-dot"></i><span>Placed Order</span><b>Commande passée</b></div>
+              <div><i class="live-dot"></i><span>Fulfilled Order</span><b>Commande expédiée</b></div>
+            </div>
+            <aside><b>TEST RAPIDE</b><p>Ouvre le site en navigation privée, inscris-toi, consulte un produit, ajoute-le au panier puis lance un checkout test. Retrouve chaque signal dans ton profil Klaviyo.</p></aside>
+          </article>
+        </div>
+
+        <div class="data-rule reveal">
+          <span>RÈGLE D’OR</span>
+          <p><b>Liste</b> = groupe auquel on entre volontairement ou par import. <b>Segment</b> = groupe dynamique calculé selon des conditions.</p>
+          <div><strong>Liste newsletter</strong><i>≠</i><strong>Acheteurs 90 jours</strong></div>
+        </div>
+
+        <div class="recipe-block reveal">
+          <header><div><span>SEGMENTS À CRÉER</span><h3>Six audiences utiles dès le départ.</h3></div><p>Adapte les fenêtres de temps au cycle d’achat. Le but n’est pas d’empiler des segments, mais de savoir à qui parler et qui exclure.</p></header>
+          <div class="recipe-table">
+            <div class="recipe-head"><span>SEGMENT</span><span>LOGIQUE</span><span>UTILISATION</span></div>
+            <div><b>Engagés récents</b><span>Ouverture ou clic récent, sans suppression</span><i>Campagnes prioritaires et montée en charge</i></div>
+            <div><b>Prospects chauds</b><span>Vue produit ou checkout, aucune commande</span><i>Relance et contenus de réassurance</i></div>
+            <div><b>Nouveaux clients</b><span>Exactement 1 commande récente</span><i>Éducation produit et seconde vente</i></div>
+            <div><b>Clients récurrents</b><span>Au moins 2 commandes</span><i>Accès anticipé, bundle et fidélité</i></div>
+            <div><b>VIP</b><span>Valeur ou fréquence dans le haut de la base</span><i>Traitement privilégié, pas remise automatique</i></div>
+            <div><b>Inactifs</b><span>Aucun engagement et aucun achat récent</span><i>Réactivation courte puis exclusion</i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="capture">
+      <div class="split-heading reveal">
+        <div><span>02 — Capture & consentement</span><h2>Gagner le droit d’écrire.</h2></div>
+        <p>Un formulaire ne sert pas à “prendre un email”. Il échange une promesse claire contre une permission. Cette permission doit rester traçable, compréhensible et facile à retirer.</p>
+      </div>
+
+      <div class="capture-lab reveal">
+        <div class="capture-preview">
+          <div class="browser-bar"><i></i><i></i><i></i><span>ta-boutique.fr</span></div>
+          <div class="store-mock">
+            <span>NOUVELLE COLLECTION</span>
+            <h3>Le bon produit.<br>Au bon moment.</h3>
+            <div class="popup-mock">
+              <small>BIENVENUE CHEZ NOUS</small>
+              <b>-10% sur ta première commande</b>
+              <p>Reçois le code et nos conseils. Pas de spam, désinscription en un clic.</p>
+              <div><span>ton@email.com</span><button>Recevoir mon code</button></div>
+              <em>Non merci, je préfère payer plein tarif.</em>
+            </div>
+          </div>
+        </div>
+        <div class="capture-rules">
+          <article><span>01</span><div><b>Une promesse concrète</b><p>Réduction, guide, accès anticipé ou conseil utile. Pas “inscris-toi à notre newsletter”.</p></div></article>
+          <article><span>02</span><div><b>Un bon timing</b><p>Laisse le visiteur comprendre la page. Teste le délai, la profondeur de scroll ou l’intention de sortie.</p></div></article>
+          <article><span>03</span><div><b>Un seul objectif</b><p>Demande le minimum d’informations nécessaire. Chaque champ supplémentaire crée une friction.</p></div></article>
+          <article><span>04</span><div><b>Un consentement lisible</b><p>Explique le canal, la fréquence attendue et le retrait possible. Ne pré-coche pas une autorisation.</p></div></article>
+          <article><span>05</span><div><b>Une confirmation immédiate</b><p>Affiche la suite et livre la promesse sans délai, dans la page et dans l’email de bienvenue.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cream-section" id="flows">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <span>03 — Les automatisations</span>
+          <h2>Les 5 flows à lancer d’abord.</h2>
+          <p>Commence simple. Chaque flow doit avoir un déclencheur clair, des filtres de sortie et un seul rôle dans le parcours client.</p>
+        </div>
+
+        <div class="flow-tabs reveal" role="tablist" aria-label="Choisir un flow">
+          <button class="active" data-flow="welcome" role="tab">01 · Welcome</button>
+          <button data-flow="checkout" role="tab">02 · Checkout</button>
+          <button data-flow="browse" role="tab">03 · Navigation</button>
+          <button data-flow="post" role="tab">04 · Après achat</button>
+          <button data-flow="winback" role="tab">05 · Winback</button>
+        </div>
+        <div class="flow-panel reveal">
+          <div class="flow-copy">
+            <span id="flowKicker">FLOW 01 — ACQUISITION</span>
+            <h3 id="flowTitle">Bienvenue</h3>
+            <p id="flowGoal">Transformer une inscription récente en première commande sans envoyer immédiatement une avalanche de promotions.</p>
+            <div class="flow-meta"><div><small>DÉCLENCHEUR</small><b id="flowTrigger">Inscription à la liste principale</b></div><div><small>SORTIE</small><b id="flowExit">Commande passée</b></div><div><small>KPI DIRECTEUR</small><b id="flowKpi">Conversion première commande</b></div></div>
+            <aside><small>LE DÉTAIL QUI COMPTE</small><p id="flowTip">Livre la promesse dans le premier email. Le second explique pourquoi la marque mérite l’attention.</p></aside>
+          </div>
+          <div class="flow-canvas" id="flowCanvas" aria-live="polite"></div>
+        </div>
+
+        <div class="flow-guardrails reveal">
+          <article><i>01</i><b>Smart Sending</b><p>Évite de sur-solliciter, mais vérifie s’il convient au rôle de chaque flow critique.</p></article>
+          <article><i>02</i><b>Filtres de flow</b><p>Empêche une personne devenue cliente de continuer une séquence d’abandon.</p></article>
+          <article><i>03</i><b>UTM & tracking</b><p>Nomme les liens pour comparer email, flow, campagne et création.</p></article>
+          <article><i>04</i><b>Mode manuel</b><p>Teste les messages et les liens avant de basculer les emails en direct.</p></article>
+        </div>
+
+        <div class="flow-blueprint reveal">
+          <header><span>BLUEPRINT DE CONTRÔLE</span><h3>Les 8 questions avant d’activer un flow.</h3></header>
+          <div>
+            <ol>
+              <li><b>Déclencheur</b><span>L’événement choisi traduit-il vraiment l’intention visée ?</span></li>
+              <li><b>Éligibilité</b><span>Qui doit entrer, et qui ne doit jamais entrer ?</span></li>
+              <li><b>Sortie</b><span>Quelle action doit stopper immédiatement la séquence ?</span></li>
+              <li><b>Pression</b><span>Le profil peut-il recevoir un autre message au même moment ?</span></li>
+            </ol>
+            <ol start="5">
+              <li><b>Timing</b><span>Le délai correspond-il au niveau d’intention et au produit ?</span></li>
+              <li><b>Contenu</b><span>Chaque email apporte-t-il une raison nouvelle de revenir ?</span></li>
+              <li><b>Tracking</b><span>Les liens, UTM et événements permettent-ils de conclure ?</span></li>
+              <li><b>QA</b><span>Le parcours a-t-il été testé avec un vrai profil de test ?</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="campaigns">
+      <div class="section-heading reveal">
+        <span>04 — Campagnes</span>
+        <h2>Une campagne n’est pas un flow.</h2>
+        <p>Le flow réagit à un comportement. La campagne répond à un moment commercial : lancement, contenu, offre, réassort ou saison.</p>
+      </div>
+      <div class="campaign-layout">
+        <div class="calendar-card reveal">
+          <header><span>RYTHME SIMPLE / 4 SEMAINES</span><b>Le calendrier qui tient</b></header>
+          <div class="week"><span>S1</span><div><b>Valeur</b><p>Conseil, démonstration ou histoire de produit.</p></div><i>ÉDUQUER</i></div>
+          <div class="week"><span>S2</span><div><b>Preuve</b><p>Avis, avant/après, usage client ou best-seller.</p></div><i>RASSURER</i></div>
+          <div class="week"><span>S3</span><div><b>Offre</b><p>Bundle, nouveauté ou offre limitée avec raison réelle.</p></div><i>CONVERTIR</i></div>
+          <div class="week"><span>S4</span><div><b>Relation</b><p>Coulisses, fondateur, sélection ou question.</p></div><i>FIDÉLISER</i></div>
+        </div>
+        <div class="email-anatomy reveal">
+          <header><span>ANATOMIE</span><b>Un email lisible en 8 secondes</b></header>
+          <ol>
+            <li><span>OBJET</span><b>Une raison d’ouvrir</b><p>Précis, crédible, cohérent avec le contenu.</p></li>
+            <li><span>PREHEADER</span><b>Une information en plus</b><p>Il complète l’objet, il ne le répète pas.</p></li>
+            <li><span>HERO</span><b>Une seule promesse</b><p>Produit, bénéfice et contexte immédiatement.</p></li>
+            <li><span>PREUVE</span><b>Une friction en moins</b><p>Avis, chiffre, garantie ou démonstration.</p></li>
+            <li><span>CTA</span><b>Une action claire</b><p>“Découvrir la collection” vaut mieux que “Cliquez ici”.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="deliverability">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <span>05 — Délivrabilité</span>
+          <h2>La boîte mail se mérite.</h2>
+          <p>La délivrabilité se construit avec l’authentification, une acquisition consentie, un envoi régulier et la suppression des profils qui n’engagent plus.</p>
+        </div>
+        <div class="health-board reveal">
+          <article class="health-score"><span>SANTÉ DU COMPTE</span><div><strong>A</strong><i></i></div><p>Exemple pédagogique — vérifie toujours les chiffres réels du compte.</p></article>
+          <div class="health-metrics">
+            <article><span>REBOUNDS</span><b>À surveiller</b><i class="green"></i><p>Une hausse brutale peut révéler une liste de mauvaise qualité.</p></article>
+            <article><span>PLAINTES SPAM</span><b>À minimiser</b><i class="coral"></i><p>Promesse floue, fréquence surprise ou ciblage trop large.</p></article>
+            <article><span>DÉSINSCRIPTIONS</span><b>À comprendre</b><i class="yellow"></i><p>Un signal de pertinence, pas seulement un chiffre à cacher.</p></article>
+            <article><span>ENGAGEMENT</span><b>À segmenter</b><i class="green"></i><p>Priorise les profils récents et actifs pendant la montée en charge.</p></article>
+          </div>
+        </div>
+        <div class="deliverability-list reveal">
+          <div><span>01</span><b>Authentifier le domaine d’envoi</b><p>Configurer les enregistrements demandés et contrôler leur validation.</p></div>
+          <div><span>02</span><b>Chauffer progressivement</b><p>Commencer par les profils les plus engagés, puis élargir selon les résultats.</p></div>
+          <div><span>03</span><b>Nettoyer sans effacer l’historique</b><p>Exclure ou supprimer proprement selon le cas. Ne réimporte jamais des désabonnés.</p></div>
+          <div><span>04</span><b>Faciliter la désinscription</b><p>Un retrait simple protège la confiance et réduit le bouton “spam”.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="upsell-section" id="upsell">
+      <div class="section-wrap">
+        <div class="upsell-heading reveal">
+          <div><span>06 — Application Shopify Upsell</span><h2>Proposer plus,<br>sans forcer.</h2></div>
+          <div class="big-stat"><small>OBJECTIF</small><b>AOV ↑</b><p>Faire monter le panier moyen en ajoutant une vraie utilité.</p></div>
+        </div>
+
+        <div class="offer-journey reveal">
+          <article><span>01</span><div class="journey-icon product-icon"><i></i><i></i></div><small>FICHE PRODUIT</small><b>Compléter</b><p>L’accessoire naturel ou la version supérieure.</p></article>
+          <i>→</i>
+          <article><span>02</span><div class="journey-icon cart-icon"><i></i><i></i><i></i></div><small>PANIER</small><b>Rassurer</b><p>Le complément évident avant le paiement.</p></article>
+          <i>→</i>
+          <article><span>03</span><div class="journey-icon pay-icon">✓</div><small>APRÈS ACHAT</small><b>Étendre</b><p>Une offre simple qui ne remet pas la commande en question.</p></article>
+          <i>→</i>
+          <article><span>04</span><div class="journey-icon email-icon">↗</div><small>EMAIL</small><b>Faire revenir</b><p>Klaviyo reprend le relais avec une offre cohérente.</p></article>
+        </div>
+
+        <div class="upsell-config reveal">
+          <article>
+            <header><span>CONFIGURATION</span><b>La règle des 5 questions</b></header>
+            <ol>
+              <li><span>01</span><p><b>À qui ?</b> Quel produit ou segment déclenche l’offre ?</p></li>
+              <li><span>02</span><p><b>Quoi ?</b> Quel complément résout la prochaine friction ?</p></li>
+              <li><span>03</span><p><b>Où ?</b> Produit, panier ou après achat ?</p></li>
+              <li><span>04</span><p><b>Pourquoi maintenant ?</b> Gain pratique, bundle ou remise justifiée ?</p></li>
+              <li><span>05</span><p><b>Comment mesurer ?</b> Vues, acceptations, revenu et marge incrémentale.</p></li>
+            </ol>
+          </article>
+          <article class="upsell-mock">
+            <div class="mock-product"><span>TON PANIER</span><b>Produit principal</b><small>64,00 €</small></div>
+            <div class="mock-offer">
+              <span>COMPLÈTE TON KIT</span>
+              <div class="mock-image"><i></i></div>
+              <div><b>Accessoire essentiel</b><p>Ajoute-le maintenant et économise 15%.</p><strong>+ 12,75 €</strong></div>
+              <button>+ Ajouter au panier</button>
+            </div>
+            <small>* Exemple de structure. Les libellés exacts varient selon la version de l’app Upsell.</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="matrix">
+      <div class="section-heading reveal">
+        <span>07 — Matrice d’offres</span>
+        <h2>Le bon produit avec le bon produit.</h2>
+        <p>Un upsell efficace paraît évident. Pars de l’usage, pas du stock que tu veux écouler.</p>
+      </div>
+      <div class="matrix reveal" role="table" aria-label="Matrice d’offres upsell">
+        <div class="matrix-head" role="row"><span>ACHAT PRINCIPAL</span><span>PROCHAINE FRICTION</span><span>OFFRE LOGIQUE</span><span>ANGLE</span></div>
+        <div role="row"><b>Soin visage</b><span>Application irrégulière</span><span>Accessoire + recharge</span><i>“La routine complète”</i></div>
+        <div role="row"><b>Café en grains</b><span>Conservation</span><span>Boîte hermétique</span><i>“Garde les arômes”</i></div>
+        <div role="row"><b>Chaussures</b><span>Entretien</span><span>Kit de nettoyage</span><i>“Protège ta paire”</i></div>
+        <div role="row"><b>Formation</b><span>Passage à l’action</span><span>Templates + session</span><i>“Implémente plus vite”</i></div>
+      </div>
+      <div class="offer-score reveal">
+        <span>SCORE UNE OFFRE AVANT DE LA PUBLIER</span>
+        <div><b>Complémentarité</b><i>+</i><b>Clarté</b><i>+</i><b>Timing</b><i>+</i><b>Marge</b><i>−</i><b>Friction</b><strong>= OFFRE SAINE</strong></div>
+      </div>
+    </section>
+
+    <section class="orchestration-section" id="orchestration">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <span>08 — Orchestration</span>
+          <h2>Klaviyo et l’app Upsell doivent rester cohérents.</h2>
+          <p>L’application Upsell agit dans Shopify ; Klaviyo exploite ensuite les données de commande synchronisées depuis Shopify. Il faut vérifier ce qui remonte réellement avant de construire une automatisation.</p>
+        </div>
+        <div class="orchestration-map reveal">
+          <div class="journey-stage"><span>VISITE</span><b>Intention détectée</b><p>Vue produit, ajout panier, checkout.</p></div>
+          <i>→</i>
+          <div class="journey-stage gold-stage"><span>COMMANDE</span><b>Offre affichée ou ajoutée</b><p>L’app mesure l’offre ; Shopify reste la source de la commande.</p></div>
+          <i>→</i>
+          <div class="journey-stage"><span>RELATION</span><b>Klaviyo personnalise</b><p>Conseil, complément, réassort ou winback.</p></div>
+        </div>
+        <div class="playbook-grid">
+          <article class="reveal"><span>PLAYBOOK 01</span><b>Produit ajouté via l’app</b><p>Vérifie sa présence dans la commande Shopify, puis retire ce produit des relances. Envoie plutôt l’usage, l’entretien et la prochaine étape logique.</p><footer>OBJECTIF · Satisfaction puis réachat</footer></article>
+          <article class="reveal"><span>PLAYBOOK 02</span><b>Offre non ajoutée</b><p>N’assume pas que Klaviyo connaît ce refus : utilise les statistiques de l’app ou un événement personnalisé seulement si l’intégration le permet.</p><footer>OBJECTIF · Mesurer sans inventer</footer></article>
+          <article class="reveal"><span>PLAYBOOK 03</span><b>Panier à forte valeur</b><p>Segmente les clients à potentiel élevé. Priorise l’expérience, le support et l’accès plutôt qu’une remise permanente.</p><footer>OBJECTIF · Protéger la LTV</footer></article>
+          <article class="reveal"><span>PLAYBOOK 04</span><b>Produit consommable</b><p>Calcule la fenêtre de réassort à partir de l’usage réel. Relance avant la rupture, pas selon un calendrier arbitraire.</p><footer>OBJECTIF · Réachat au bon moment</footer></article>
+        </div>
+        <div class="exclusion-rule reveal"><span>POINT TECHNIQUE</span><p>Ne suppose pas que l’app Upsell envoie nativement ses vues et refus dans Klaviyo. La donnée de commande Shopify est la base fiable ; les événements supplémentaires doivent être vérifiés dans l’app et sur un profil test.</p></div>
+      </div>
+    </section>
+
+    <section class="cream-section" id="copy">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <span>09 — Copywriting</span>
+          <h2>Des textes prêts à adapter.</h2>
+          <p>Copie la structure, puis remplace les crochets avec la réalité du produit. La précision convertit mieux que les superlatifs.</p>
+        </div>
+        <div class="copy-grid">
+          <article class="copy-card reveal"><header><span>WELCOME / EMAIL 1</span><button class="copy-button" type="button">Copier</button></header><p>Bienvenue chez [Marque]. Voici ton code <b>[CODE]</b> pour profiter de [avantage]. Si tu ne sais pas par où commencer, découvre [collection / produit] : c’est le choix idéal pour [bénéfice précis].</p><footer>CTA · Découvrir [la sélection]</footer></article>
+          <article class="copy-card reveal"><header><span>ABANDON CHECKOUT</span><button class="copy-button" type="button">Copier</button></header><p>Tu étais à deux doigts de finaliser. Ton panier est encore disponible : [produit]. Une question sur [livraison / taille / usage] ? Réponds directement à cet email, on t’aide.</p><footer>CTA · Reprendre ma commande</footer></article>
+          <article class="copy-card reveal"><header><span>UPSELL PANIER</span><button class="copy-button" type="button">Copier</button></header><p>Complète ton [routine / kit / installation] avec <b>[produit complémentaire]</b>. Il t’aide à [bénéfice concret] dès la première utilisation.</p><footer>CTA · Ajouter pour [prix]</footer></article>
+          <article class="copy-card reveal"><header><span>APRÈS ACHAT</span><button class="copy-button" type="button">Copier</button></header><p>Ta commande est confirmée. Pour profiter au maximum de [produit acheté], voici notre méthode en 3 étapes : [étape 1], [étape 2], [étape 3].</p><footer>CTA · Voir le mode d’emploi</footer></article>
+          <article class="copy-card reveal"><header><span>WINBACK</span><button class="copy-button" type="button">Copier</button></header><p>Ça fait un moment. Depuis ta dernière commande, nous avons [nouveauté réelle]. Si [besoin] est toujours d’actualité, voici ce que l’on te recommande aujourd’hui.</p><footer>CTA · Voir les nouveautés</footer></article>
+          <article class="copy-card accent-card reveal"><header><span>FORMULE</span></header><p><b>Contexte</b> → pourquoi maintenant<br><b>Bénéfice</b> → ce que ça change<br><b>Preuve</b> → pourquoi te croire<br><b>Action</b> → quoi faire ensuite</p><footer>1 message = 1 prochaine action</footer></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="pilotage">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <span>10 — Pilotage</span>
+          <h2>Le chiffre décide.</h2>
+          <p>Ne confonds pas attribution et causalité. Utilise les chiffres pour comparer des périodes et prendre une décision, pas pour fabriquer une belle capture d’écran.</p>
+        </div>
+        <div class="kpi-grid reveal">
+          <article><span>AOV</span><b>Panier moyen</b><p>Chiffre d’affaires ÷ nombre de commandes.</p><i>UPSELL</i></article>
+          <article><span>RPR</span><b>Taux de réachat</b><p>Clients ayant commandé à nouveau ÷ clients.</p><i>KLAVIYO</i></article>
+          <article><span>CVR</span><b>Conversion</b><p>Commandes ÷ sessions ou vues de l’offre.</p><i>SHOPIFY</i></article>
+          <article><span>RPC</span><b>Revenu / destinataire</b><p>Revenu attribué ÷ destinataires livrés.</p><i>EMAIL</i></article>
+        </div>
+
+        <div class="calculator reveal">
+          <div class="calculator-copy"><span>CALCULATEUR D’IMPACT</span><h3>Combien vaut une hausse du panier ?</h3><p>Estimation simple, avant coûts, remises, retours et attribution. Utilise-la pour fixer l’ordre de grandeur d’un test.</p></div>
+          <form id="aovCalculator">
+            <label>Commandes / mois<input id="ordersInput" type="number" min="0" step="1" value="500"></label>
+            <label>Panier actuel (€)<input id="aovInput" type="number" min="0" step="0.01" value="62"></label>
+            <label>Hausse visée (%)<input id="liftInput" type="number" min="0" step="0.1" value="8"></label>
+            <label>Marge brute (%)<input id="marginInput" type="number" min="0" max="100" step="0.1" value="65"></label>
+          </form>
+          <div class="calculator-result"><span>IMPACT MENSUEL ESTIMÉ</span><b id="revenueResult">2 480 €</b><small>revenu brut additionnel</small><strong id="marginResult">≈ 1 612 € de marge brute</strong></div>
+        </div>
+
+        <div class="decision-dashboard reveal">
+          <header><span>RITUEL HEBDOMADAIRE · 30 MIN</span><h3>Observer → expliquer → décider.</h3></header>
+          <div><span>01</span><b>Qualité d’envoi</b><p>Rebonds, plaintes, désabonnements et engagement par audience.</p><i>Décision : qui ralentir ou exclure ?</i></div>
+          <div><span>02</span><b>Performance messages</b><p>Clic, conversion, revenu par destinataire et évolution par flow.</p><i>Décision : quel message retravailler ?</i></div>
+          <div><span>03</span><b>Performance offre</b><p>Vues, acceptation, AOV, marge et produits les plus associés.</p><i>Décision : quelle offre garder ?</i></div>
+          <div><span>04</span><b>Prochaine expérience</b><p>Une hypothèse, une variable, une durée et un critère de décision.</p><i>Décision : que teste-t-on maintenant ?</i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="tests">
+      <div class="split-heading reveal">
+        <div><span>11 — Tests</span><h2>Tester avec une raison.</h2></div>
+        <p>Un test utile commence par une hypothèse et finit par une décision. Si tu changes le produit, le prix, le placement et le texte à la fois, tu n’apprends rien.</p>
+      </div>
+      <div class="test-loop reveal">
+        <article><span>01</span><b>Observer</b><p>Ex. l’offre panier est beaucoup vue mais peu acceptée.</p></article><i>→</i>
+        <article><span>02</span><b>Formuler</b><p>“Le complément est pertinent, mais son bénéfice reste flou.”</p></article><i>→</i>
+        <article><span>03</span><b>Changer 1 variable</b><p>Réécrire le titre autour de l’usage, sans toucher au prix.</p></article><i>→</i>
+        <article><span>04</span><b>Décider</b><p>Garder, annuler ou approfondir selon le signal obtenu.</p></article>
+      </div>
+      <div class="priority-table reveal">
+        <header><span>ORDRE DE TEST RECOMMANDÉ</span><b>Impact probable × facilité</b></header>
+        <div><strong>01</strong><b>Couple produit → complément</b><span>Très fort</span><i>À tester d’abord</i></div>
+        <div><strong>02</strong><b>Placement de l’offre</b><span>Fort</span><i>Produit / panier / après achat</i></div>
+        <div><strong>03</strong><b>Promesse & preuve</b><span>Fort</span><i>Bénéfice concret</i></div>
+        <div><strong>04</strong><b>Prix ou remise</b><span>Moyen</span><i>Protège la marge</i></div>
+        <div><strong>05</strong><b>Couleur du bouton</b><span>Faible</span><i>À garder pour plus tard</i></div>
+      </div>
+
+      <div class="troubleshooting reveal">
+        <header><span>SI ÇA NE MARCHE PAS</span><h3>Diagnostiquer avant de tout refaire.</h3></header>
+        <details><summary><b>Le flow ne déclenche pas</b><i>+</i></summary><p>Vérifie l’événement sur le profil test, les filtres d’entrée, le statut du message et la date d’entrée. Un profil déjà passé dans le flow peut aussi être inéligible selon les réglages.</p></details>
+        <details><summary><b>Les emails génèrent des ouvertures mais peu de ventes</b><i>+</i></summary><p>Analyse d’abord les clics, la cohérence message-page, l’offre et la friction sur mobile. Une ouverture ne prouve pas une intention d’achat.</p></details>
+        <details><summary><b>L’offre Upsell est vue mais refusée</b><i>+</i></summary><p>Teste la complémentarité avant la remise. Le client doit comprendre instantanément pourquoi le produit améliore son achat principal.</p></details>
+        <details><summary><b>Le panier moyen monte mais la marge baisse</b><i>+</i></summary><p>Intègre remise, coût produit, frais et retours. Le bon indicateur n’est pas seulement le revenu ajouté, mais la contribution incrémentale.</p></details>
+        <details><summary><b>La délivrabilité se dégrade</b><i>+</i></summary><p>Réduis la pression, cible les engagés, contrôle la source des profils et vérifie l’authentification. N’essaie pas de compenser par plus d’envois.</p></details>
+        <details><summary><b>Klaviyo et Shopify n’affichent pas le même revenu</b><i>+</i></summary><p>Compare les fenêtres et règles d’attribution. Utilise Shopify comme réalité transactionnelle et Klaviyo pour comparer les performances marketing de manière cohérente.</p></details>
+      </div>
+    </section>
+
+    <section class="sprint-section" id="sprint">
+      <div class="section-wrap">
+        <div class="section-heading reveal">
+          <span>12 — Exécution</span>
+          <h2>Ton sprint en 7 jours.</h2>
+          <p>Pas besoin de tout perfectionner avant de lancer. Mets une version propre en ligne, mesure, puis améliore dans cet ordre.</p>
+        </div>
+        <div class="sprint-grid">
+          <article class="reveal"><span>J1</span><b>Brancher</b><p>Connecter Shopify, vérifier le tracking et le consentement.</p><i>45–90 min</i></article>
+          <article class="reveal"><span>J2</span><b>Nettoyer</b><p>Créer les segments essentiels et exclure les profils risqués.</p><i>60 min</i></article>
+          <article class="reveal"><span>J3</span><b>Capter</b><p>Publier un formulaire avec une promesse et une confirmation.</p><i>90 min</i></article>
+          <article class="reveal highlight"><span>J4</span><b>Automatiser</b><p>Lancer Welcome, Abandon checkout et Après achat.</p><i>2–3 h</i></article>
+          <article class="reveal"><span>J5</span><b>Proposer</b><p>Créer un premier couple produit × complément dans Upsell.</p><i>60–90 min</i></article>
+          <article class="reveal"><span>J6</span><b>Tester</b><p>Faire le parcours complet sur mobile et desktop avec une commande test.</p><i>60 min</i></article>
+          <article class="reveal"><span>J7</span><b>Piloter</b><p>Noter les chiffres de départ et programmer le premier bilan.</p><i>30 min</i></article>
+        </div>
+        <div class="launch-checklist reveal">
+          <div><span>CHECKLIST AVANT “LIVE”</span><h3>La dernière vérification.</h3><p>Coche chaque point. Le statut reste enregistré sur ton appareil.</p></div>
+          <ul id="launchChecklist">
+            <li><label><input type="checkbox" data-check="events"><i></i><span>Les événements Shopify remontent.</span></label></li>
+            <li><label><input type="checkbox" data-check="links"><i></i><span>Tous les liens, codes et boutons fonctionnent.</span></label></li>
+            <li><label><input type="checkbox" data-check="filters"><i></i><span>Les filtres de sortie évitent les messages incohérents.</span></label></li>
+            <li><label><input type="checkbox" data-check="mobile"><i></i><span>Le parcours est lisible sur mobile.</span></label></li>
+            <li><label><input type="checkbox" data-check="margin"><i></i><span>L’offre Upsell reste rentable après remise.</span></label></li>
+            <li><label><input type="checkbox" data-check="report"><i></i><span>Une date de bilan est déjà fixée.</span></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section glossary-section">
+      <div class="section-heading reveal">
+        <span>13 — Mini glossaire</span>
+        <h2>Les mots à connaître.</h2>
+      </div>
+      <div class="glossary-grid reveal">
+        <details><summary><span>AOV</span><b>Panier moyen</b><i>+</i></summary><p>Montant moyen dépensé par commande. Chiffre d’affaires divisé par nombre de commandes.</p></details>
+        <details><summary><span>FLOW</span><b>Automatisation</b><i>+</i></summary><p>Suite de messages déclenchée par une action, une date ou l’entrée dans un segment.</p></details>
+        <details><summary><span>SEGMENT</span><b>Groupe dynamique</b><i>+</i></summary><p>Ensemble de profils qui entrent et sortent automatiquement selon des conditions.</p></details>
+        <details><summary><span>UPSELL</span><b>La stratégie</b><i>+</i></summary><p>Proposition d’une version supérieure ou d’une offre qui augmente la valeur de l’achat.</p></details>
+        <details><summary><span>APP UPSELL</span><b>L’application Shopify</b><i>+</i></summary><p>Outil installé sur Shopify pour construire, afficher et mesurer des offres complémentaires selon les fonctionnalités disponibles dans l’app.</p></details>
+        <details><summary><span>CROSS-SELL</span><b>Vente complémentaire</b><i>+</i></summary><p>Proposition d’un produit différent mais utile avec l’achat principal.</p></details>
+        <details><summary><span>LTV</span><b>Valeur client</b><i>+</i></summary><p>Valeur générée par un client sur l’ensemble de sa relation avec la marque.</p></details>
+        <details><summary><span>TRIGGER</span><b>Déclencheur</b><i>+</i></summary><p>Événement qui fait entrer un profil dans un flow, par exemple Started Checkout.</p></details>
+        <details><summary><span>UTM</span><b>Balise de suivi</b><i>+</i></summary><p>Paramètre ajouté à un lien pour identifier sa source, sa campagne ou sa création.</p></details>
+        <details><summary><span>RPR</span><b>Taux de réachat</b><i>+</i></summary><p>Part des clients qui ont effectué au moins une commande supplémentaire.</p></details>
+        <details><summary><span>RPC</span><b>Revenu par destinataire</b><i>+</i></summary><p>Revenu attribué divisé par le nombre de destinataires livrés.</p></details>
+        <details><summary><span>CVR</span><b>Taux de conversion</b><i>+</i></summary><p>Part des visiteurs ou destinataires qui réalisent l’action attendue.</p></details>
+        <details><summary><span>DELIVERABILITY</span><b>Délivrabilité</b><i>+</i></summary><p>Capacité à atteindre la boîte de réception tout en protégeant sa réputation d’expéditeur.</p></details>
+        <details><summary><span>BOUNCE</span><b>Rebond</b><i>+</i></summary><p>Échec de livraison d’un message, temporaire ou permanent selon la cause.</p></details>
+        <details><summary><span>SUPPRESSION</span><b>Profil non contactable</b><i>+</i></summary><p>Profil conservé dans l’historique mais exclu des envois, par exemple après désinscription.</p></details>
+        <details><summary><span>ATTRIBUTION</span><b>Crédit marketing</b><i>+</i></summary><p>Règle utilisée par un outil pour associer une vente à un message ou un canal.</p></details>
+        <details><summary><span>MARGE</span><b>Valeur après coût</b><i>+</i></summary><p>Ce qu’il reste après les coûts pris en compte. Un upsell doit augmenter la contribution, pas uniquement le revenu.</p></details>
+      </div>
+    </section>
+
+    <section class="sources-band">
+      <div>
+        <span>POUR ALLER PLUS LOIN</span>
+        <p>Les interfaces et fonctions évoluent. Vérifie les réglages sensibles dans la documentation officielle avant publication.</p>
+      </div>
+      <a href="https://help.klaviyo.com/hc/en-us/articles/115005080407" target="_blank" rel="noreferrer">Connexion Shopify × Klaviyo ↗</a>
+      <a href="https://help.shopify.com/fr/manual/promoting-marketing" target="_blank" rel="noreferrer">Marketing Shopify ↗</a>
+      <a href="https://apps.shopify.com/" target="_blank" rel="noreferrer">Shopify App Store ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#top"><span class="focus-wordmark">Focus</span></a>
+    <p>Le playbook Klaviyo × Upsell · Conçu pour passer du live à l’action.</p>
+    <span>Édition 2026</span>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Retourner tout en haut de la page" title="Retour en haut">
+    <span>↑</span><b>HAUT</b>
+  </button>
+  <div class="toast" id="toast" role="status" aria-live="polite">Texte copié ✓</div>
+  <script src="script.js"></script>
+</body>
+</html>
