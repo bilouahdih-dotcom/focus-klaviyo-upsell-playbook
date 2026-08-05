@@ -44,8 +44,8 @@ p { line-height: 1.65; }
 .nav-links a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -8px; height: 2px; background: var(--coral); transition: right .35s var(--ease); }
 .nav-links a:hover::after { right: 0; }
 .header-actions { display: flex; align-items: center; gap: 10px; }
-.progress-pill { flex: 0 0 auto; padding: 11px 15px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-size: 12px; font-weight: 700; white-space: nowrap; }
-.progress-pill b { color: #708100; }
+.progress-pill { flex: 0 0 auto; padding: 11px 16px; color: white; border: 1px solid #5a4820; border-radius: 999px; background: var(--ink); box-shadow: 0 7px 20px rgba(33,24,4,.12); font-size: 12px; font-weight: 700; white-space: nowrap; }
+.progress-pill b { color: var(--gold); }
 .menu-button { display: none; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); cursor: pointer; }
 
 .cover { position: relative; padding: 54px 28px 70px; overflow: hidden; background: radial-gradient(circle at 50% 15%,rgba(210,165,27,.12),transparent 34%),var(--paper); border-bottom: 1px solid var(--line); }
